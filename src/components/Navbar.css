@@ -1,0 +1,86 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5170fe;
+}
+
+/* Default Hidden Menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #5170fe;
+}
+
+/* Hide links by default on small screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden initially */
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links.open {
+        display: flex; /* Show links when open */
+        opacity: 0;
+        animation: reveal 0.5s forwards;
+    }
+
+    @keyframes reveal {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Show hamburger icon on small screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}

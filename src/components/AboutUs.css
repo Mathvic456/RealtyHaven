@@ -1,0 +1,56 @@
+.about-us-container {
+    padding: 40px; /* Add padding to the page */
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    text-align: left; /* Align text to the left for better readability */
+    line-height: 1.6; /* Increase line height for better readability */
+}
+
+.about-us-container h1,
+.about-us-container h2 {
+    color: #5170fe; /* Color for the headings */
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 2.5rem; /* Size for the main heading */
+    text-align: center; /* Center the heading */
+}
+
+.about-us-container p {
+    font-size: 1.1rem; /* Base font size for paragraphs */
+    color: #333; /* Darker text color for readability */
+    margin-bottom: 20px; /* Space below each paragraph */
+}
+
+.social-media-links {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the icons */
+    margin-top: 20px; /* Space above the icons */
+}
+
+.social-media-links a {
+    margin: 0 10px; /* Space between icons */
+    color: #5170fe; /* Icon color */
+    transition: color 0.3s ease; /* Transition effect for hover */
+}
+
+.social-media-links a:hover {
+    color: #333; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-us-container {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .about-us-container h1 {
+        font-size: 2rem; /* Reduce heading size on smaller screens */
+    }
+
+    .about-us-container h2 {
+        font-size: 1.8rem; /* Reduce subheading size on smaller screens */
+    }
+
+    .about-us-container p {
+        font-size: 1rem; /* Reduce font size on smaller screens */
+    }
+}

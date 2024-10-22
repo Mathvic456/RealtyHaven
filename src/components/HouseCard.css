@@ -1,0 +1,77 @@
+/* Main CSS file for House Listings */
+
+/* House grid */
+.house-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 30px; /* Increase spacing between items */
+    margin-top: 20px;
+    padding: 20px; /* Added padding to the grid container */
+}
+
+/* House card styling */
+.house-card {
+    border: 2px solid #5170fe; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Internal padding */
+    background-color: white; /* Card background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.2s ease-in-out; /* Transition for hover effect */
+}
+
+.house-card:hover {
+    transform: scale(1.02); /* Slight scaling on hover */
+}
+
+/* House image styling */
+.house-image {
+    width: 100%; /* Full width */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Cover the space without distortion */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below image */
+}
+
+/* House details layout */
+.house-details {
+    display: flex; /* Flexbox for vertical stacking */
+    flex-direction: column; /* Vertical arrangement */
+    gap: 5px; /* Space between details */
+}
+
+/* Individual detail styling */
+.detail {
+    font-size: 0.9rem; /* Smaller font size */
+    color: #333; /* Dark color for text */
+}
+
+/* Price detail styling */
+.detail-price {
+    color: #5170fe; /* Price color */
+    font-weight: bold; /* Bold font */
+    font-size: 1rem; /* Slightly larger font */
+}
+
+/* Tabs styling */
+.tabs {
+    display: flex; /* Flexbox for horizontal layout */
+    margin-bottom: 20px; /* Space below tabs */
+}
+
+.tabs button {
+    flex: 1; /* Equal width for buttons */
+    padding: 10px; /* Internal padding */
+    background-color: #f0f0f0; /* Background color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.tabs button:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+.tabs button.active {
+    background-color: #5170fe; /* Active tab color */
+    color: white; /* Text color for active tab */
+}

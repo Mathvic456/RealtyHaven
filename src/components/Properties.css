@@ -1,0 +1,119 @@
+.house-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 30px; /* Increase spacing between items */
+    margin-top: 20px;
+}
+
+.house-listing-container {
+    /* padding: 3px; Add padding to the page */
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 13px auto 0; /* Center the container and add margin-top */
+    text-align: center;
+}
+
+.house-card {
+    border: 2px solid #5170fe;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.house-card:hover {
+    transform: scale(1.02);
+}
+
+.house-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.house-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.detail-price {
+    color: #5170fe;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .house-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row on large screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .house-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .house-grid {
+        grid-template-columns: 1fr; /* 1 item per row on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .house-grid {
+        gap: 20px; /* Reduce gap on very small screens */
+    }
+}
+
+.tabs {
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    background-color: white;
+    border: 2px solid #5170fe;
+    color: #5170fe;
+    padding: 12px 25px; /* Increased padding for larger buttons */
+    margin: 0 10px; /* Add space between buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+    font-size: 1.1rem; /* Slightly increase font size */
+    border-radius: 5px; /* Rounded corners for a better look */
+}
+
+.tabs button.active {
+    background-color: #5170fe;
+    color: white;
+}
+
+.tabs button:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    color: #5170fe; /* Keep text color */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive styles for tabs */
+@media (max-width: 768px) {
+    .tabs button {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Slightly decrease font size */
+        margin: 0 5px; /* Reduce margin for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .tabs button {
+        width: 100%; /* Full width buttons on very small screens */
+        margin: 5px 0; /* Margin on top and bottom for spacing */
+    }
+}

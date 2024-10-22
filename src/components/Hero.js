@@ -2,6 +2,10 @@
 import React from 'react';
 import '../components/Hero.css';
 import Navbar from './Navbar';
+
+
+
+
 const Hero = () => {
     return (
         <section className="hero">

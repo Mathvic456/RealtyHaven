@@ -1,39 +1,48 @@
-.contact-us-container {
-    font-family: 'Roboto', sans-serif;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    background-color: #f9f9f9; /* Light background for contrast */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    animation: fadeIn 0.5s ease-in; /* Fade in animation */
-}
-
-h1 {
-    color: #5170fe;
-    margin-bottom: 20px;
+/* Contact Us Page Styles */
+.contact-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f9f9f9;
 }
 
 .contact-details {
-    text-align: left; /* Align to left for better readability */
-    margin-bottom: 20px; /* Space below contact details */
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-right: 50px;
 }
 
-p {
-    margin: 10px 0; /* Space between paragraphs */
+h2 {
+    color: #5170fe;
+}
+
+.office-info p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-section {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
     margin-bottom: 15px;
-    text-align: left;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
     color: #333;
-    font-weight: 500;
 }
 
 input, textarea {
@@ -41,14 +50,12 @@ input, textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition for focus */
+    transition: border-color 0.3s ease;
 }
 
 input:focus, textarea:focus {
     border-color: #5170fe;
     outline: none;
-    box-shadow: 0 0 5px rgba(81, 112, 254, 0.5); /* Add shadow on focus */
 }
 
 button {
@@ -58,24 +65,24 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transform */
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #425ab3;
-    transform: scale(1.05); /* Scale effect on hover */
+    transform: scale(1.05);
 }
 
-/* Success message styles */
+/* Success message */
 .success-message {
-    margin-top: 20px;
-    color: #28a745; /* Green color */
+    color: #28a745;
     font-weight: bold;
-    animation: fadeIn 0.5s ease-in; /* Fade in animation */
+    margin-top: 10px;
+    animation: fadeIn 0.5s ease-in;
 }
 
-/* Fade in animation */
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -85,9 +92,15 @@ button:hover {
     }
 }
 
-/* Responsive Styles */
+/* Media Queries */
 @media (max-width: 768px) {
-    .contact-us-container {
-        padding: 15px;
+    .contact-page {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-details, .form-section {
+        margin-right: 0;
+        margin-bottom: 30px;
     }
 }

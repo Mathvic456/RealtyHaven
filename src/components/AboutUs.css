@@ -1,56 +1,198 @@
 .about-us-container {
-    padding: 40px; /* Add padding to the page */
-    max-width: 800px; /* Set a maximum width for the container */
-    margin: 0 auto; /* Center the container */
-    text-align: left; /* Align text to the left for better readability */
-    line-height: 1.6; /* Increase line height for better readability */
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif; /* Ensure a clean font is applied */
+    color: #333;
+    text-align: left;
+    animation: fadeInUp 0.8s ease-in-out; /* Animation for entrance */
 }
 
-.about-us-container h1,
-.about-us-container h2 {
-    color: #5170fe; /* Color for the headings */
-    margin-bottom: 20px; /* Space below the heading */
-    font-size: 2.5rem; /* Size for the main heading */
-    text-align: center; /* Center the heading */
+h1 {
+    font-size: 2.5rem;
+    color: #5170fe; /* Header color */
+    margin-bottom: 20px;
 }
 
-.about-us-container p {
-    font-size: 1.1rem; /* Base font size for paragraphs */
-    color: #333; /* Darker text color for readability */
-    margin-bottom: 20px; /* Space below each paragraph */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #5170fe; /* Consistent with branding */
+    margin-top: 30px;
+}
+
+.values-container {
+    display: flex; /* Use flexbox for row layout */
+    justify-content: space-between; /* Even spacing between items */
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+    margin: 20px 0; /* Space between sections */
+}
+.value-item {
+    flex: 1; /* Allow items to grow */
+    max-width: 220px; /* Set a max width for items */
+    background-color: #f9f9f9; /* Light background for sections */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    margin: 10px; /* Space between items */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Animation for hover effect */
+    color: #333; /* Default text color */
+}
+
+.value-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    background-color: #5170fe; /* Change background color to blue */
+    color: white; /* Change text color to white */
+}
+
+.value-icon {
+    font-size: 40px; /* Icon size */
+    color: #5170fe; /* Icon color */
+    margin-bottom: 10px; /* Space between icon and text */
+    transition: color 0.3s; /* Smooth transition for icon color */
+}
+
+.value-item:hover .value-icon {
+    color: white; /* Change icon color to white on hover */
+}
+
+.team-container {
+    display: flex; /* Use flexbox for row layout */
+    justify-content: space-between; /* Even spacing between items */
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+    margin: 20px 0; /* Space between sections */
+}
+
+.team-member {
+    flex: 1; /* Allow items to grow */
+    max-width: 220px; /* Set a max width for items */
+    background-color: #f9f9f9; /* Light background for sections */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    margin: 10px; /* Space between items */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Animation for hover effect */
+    color: #333; /* Default text color */
+}
+
+.team-member:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    background-color: #5170fe; /* Change background color to blue */
+    color: white; /* Change text color to white */
+}
+
+.team-icon {
+    font-size: 40px; /* Icon size */
+    color: #5170fe; /* Icon color */
+    margin-bottom: 10px; /* Space between icon and text */
+    transition: color 0.3s; /* Smooth transition for icon color */
+}
+
+.team-member:hover .value-icon {
+    color: white; /* Change icon color to white on hover */
+}
+
+ul {
+    margin-left: 20px; /* Indentation for list items */
+    list-style-type: disc; /* Bullet points for list */
 }
 
 .social-media-links {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the icons */
-    margin-top: 20px; /* Space above the icons */
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .social-media-links a {
-    margin: 0 10px; /* Space between icons */
     color: #5170fe; /* Icon color */
-    transition: color 0.3s ease; /* Transition effect for hover */
+    transition: color 0.3s; /* Smooth transition */
 }
 
 .social-media-links a:hover {
-    color: #333; /* Change color on hover */
+    color: #0056b3; /* Darker shade on hover */
 }
 
-/* Responsive Styles */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .about-us-container {
-        padding: 20px; /* Reduce padding on smaller screens */
+        padding: 10px;
     }
 
-    .about-us-container h1 {
-        font-size: 2rem; /* Reduce heading size on smaller screens */
+    h1 {
+        font-size: 2rem;
     }
 
-    .about-us-container h2 {
-        font-size: 1.8rem; /* Reduce subheading size on smaller screens */
+    h2 {
+        font-size: 1.5rem;
     }
 
-    .about-us-container p {
-        font-size: 1rem; /* Reduce font size on smaller screens */
+    .values-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
     }
+
+    .value-item {
+        max-width: 100%; /* Full width on small screens */
+        margin: 10px 0; /* Space between items */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p, ul {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.achievements-container,
+.faqs-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.achievement-item,
+.faq-item {
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+    margin: 10px; /* Space between items */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Animation for hover effect */
+    color: #333; /* Default text color */
+    width: calc(30% - 40px); /* 3 items per row */
+}
+
+.achievement-item:hover,
+.faq-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    background-color: #5170fe; /* Change background color to blue */
+    color: white; /* Change text color to white */
+}
+
+.achievement-icon,
+.faq-icon {
+    font-size: 40px; /* Icon size */
+    margin-bottom: 10px; /* Space between icon and text */
 }

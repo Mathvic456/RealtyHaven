@@ -3,7 +3,7 @@ import './AboutUs.css'; // Ensure you have your CSS file imported
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'; // Import social media icons
 import { FaShieldAlt, FaRocket, FaUserFriends, FaRegStar } from 'react-icons/fa'; // Icons for values
 import { FaUserTie, FaChalkboardTeacher, FaProjectDiagram } from 'react-icons/fa'; // Icons for team members
-import { FaTrophy, FaAward, FaQuestionCircle } from 'react-icons/fa'; // Icons for achievements and FAQs
+import { FaTrophy, FaAward, FaQuestionCircle, FaMedal } from 'react-icons/fa'; // Icons for achievements and FAQs
 
 const AboutUs = () => {
     return (
@@ -83,7 +83,7 @@ const AboutUs = () => {
                     <p>We have established partnerships with leading asset management firms to enhance our offerings.</p>
                 </div>
                 <div className="value-item">
-                    <FaQuestionCircle className="value-icon" />
+                    <FaMedal className="value-icon" />
                     <h3>Industry Recognition</h3>
                     <p>Recognized as one of the top emerging fintech companies in 2023, we continue to innovate.</p>
                 </div>

@@ -83,3 +83,16 @@
     background-color: #5170fe;
     color: white;
 }
+
+p span {
+    font-weight: bold;
+}
+
+.hero-btn{
+    font-weight: bold;
+}
+
+
+.hero-btn.secondary-btn{
+    font-weight: bold;
+}

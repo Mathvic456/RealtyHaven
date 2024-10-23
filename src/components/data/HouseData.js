@@ -94,12 +94,67 @@ export const upcomingHouses = [
         rentStartDate: '2024-12-15',
         pricePerToken: 130,
     },
+
+    {
+        id: 10,
+        image: 'https://i.pinimg.com/control/564x/33/bb/a0/33bba04cb8143b1a24bbd68769377b47.jpg',
+        totalPrice: 350000,
+        tokenPrice: 1700,
+        address: '3333 Birch Road, Springfield',
+        expectedIncome: 2100,
+        rentStartDate: '2024-12-15',
+        pricePerToken: 130,
+    },
+
+    {
+        id: 11,
+        image: 'https://i.pinimg.com/control/564x/33/bb/a0/33bba04cb8143b1a24bbd68769377b47.jpg',
+        totalPrice: 350000,
+        tokenPrice: 1700,
+        address: '3333 Birch Road, Springfield',
+        expectedIncome: 2100,
+        rentStartDate: '2024-12-15',
+        pricePerToken: 130,
+    },
+
+    {
+        id: 12,
+        image: 'https://i.pinimg.com/control/564x/33/bb/a0/33bba04cb8143b1a24bbd68769377b47.jpg',
+        totalPrice: 350000,
+        tokenPrice: 1700,
+        address: '3333 Birch Road, Springfield',
+        expectedIncome: 2100,
+        rentStartDate: '2024-12-15',
+        pricePerToken: 130,
+    },
+
+    {
+        id: 13,
+        image: 'https://i.pinimg.com/control/564x/33/bb/a0/33bba04cb8143b1a24bbd68769377b47.jpg',
+        totalPrice: 350000,
+        tokenPrice: 1700,
+        address: '3333 Birch Road, Springfield',
+        expectedIncome: 2100,
+        rentStartDate: '2024-12-15',
+        pricePerToken: 130,
+    },
+
+    {
+        id: 14,
+        image: 'https://i.pinimg.com/control/564x/33/bb/a0/33bba04cb8143b1a24bbd68769377b47.jpg',
+        totalPrice: 350000,
+        tokenPrice: 1700,
+        address: '3333 Birch Road, Springfield',
+        expectedIncome: 2100,
+        rentStartDate: '2024-12-15',
+        pricePerToken: 130,
+    },
     // Add more upcoming houses here
 ];
 
 export const soldHouses = [
     {
-        id: 3,
+        id: 15,
         image: 'https://i.pinimg.com/control/564x/33/bb/a0/33bba04cb8143b1a24bbd68769377b47.jpg',
         totalPrice: 400000,
         tokenPrice: 2000,

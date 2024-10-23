@@ -1,15 +1,16 @@
-// Navbar.js
 import React from 'react';
-import '../components/Navbar.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa'; // Import menu icon
+import '../components/Navbar.css';
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false); // State to toggle menu
+    const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen); // Toggle state
+        setIsOpen(!isOpen);
     };
+
     return (
         <nav className="navbar">
             <div className="logo">RealtyHaven</div>
@@ -19,10 +20,8 @@ const Navbar = () => {
                 <li><Link to='AboutUs'>About Us</Link></li>
                 <li><Link to='Contact'>Contact Us</Link></li>
             </ul>
-            <div className="hamburger" onClick={toggleMenu}>
-                <span className="line"></span>
-                <span className="line"></span>
-                <span className="line"></span>
+            <div className="menu-icon" onClick={toggleMenu}>
+                <FaBars size={22} color='#5170fe'/> {/* Menu icon */}
             </div>
         </nav>
     );

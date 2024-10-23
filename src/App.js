@@ -7,6 +7,9 @@ import PropertyDetail from './components/PropertyDetail';
 import { exclusiveHouses, upcomingHouses, soldHouses } from './components/data/HouseData'; // Adjust the path based on where your data is stored
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
+import SignIn from './components/authentication/SignIn';
+import SignUp from './components/authentication/SignUp';
+
 
 
 function App() {
@@ -25,6 +28,8 @@ function App() {
         <Route path='/property/:id' element={<PropertyDetail houseData={allListings} />} />
         <Route path='AboutUs' element={<AboutUs />} />
         <Route path='Contact' element={<ContactUs />} />
+        <Route path='Login-Page' element={<SignIn />} />
+        <Route path='/signup' element={<SignUp />} />
 
       </Routes>
     </Router>

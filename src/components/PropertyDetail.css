@@ -1,0 +1,91 @@
+/* Container for Property Details */
+.property-detail-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align for a neater look */
+}
+
+/* Property Image */
+.property-main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Details Section */
+.property-details {
+    margin-top: 1rem;
+}
+
+/* Button Styles */
+.invest-button, .show-more-button {
+    display: inline-block;
+    width: 48%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.invest-button:hover, .show-more-button:hover {
+    background-color: #0056b3;
+}
+
+/* Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Overlay Content */
+.overlay-content {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    position: relative;
+    max-width: 90%;
+}
+
+/* Close Icon */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Image in Overlay */
+.overlay-image {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .property-detail-container {
+        padding: 1rem;
+    }
+
+    .invest-button, .show-more-button {
+        width: 100%; /* Full width on smaller screens */
+        margin: 0.5rem 0; /* Adjust margin */
+    }
+}

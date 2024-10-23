@@ -1,0 +1,128 @@
+/* General Login Page Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f9fc; /* Light background color */
+}
+
+.login-card {
+    background-color: white;
+    padding: 2.5rem 2rem; /* Adjusted padding */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+/* Adjustments for form elements */
+.login-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #5170fe;
+    margin-bottom: 1.5rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    /* border: 2px solid black; */
+    padding: 2rem;
+}
+
+
+.input-group {
+    margin-bottom: 1.2rem;
+    position: relative;
+    /* border: 2px solid black; */
+
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    color: #333;
+    margin-bottom: 0.5rem; /* Spacing between label and input */
+}
+.input-group input {
+    width: 100%; /* Use full width */
+    max-width: 400px; /* Limit the maximum width */
+    padding: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding and border in element's total width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #5170fe;
+    outline: none;
+    box-shadow: 0 0 8px rgba(81, 112, 254, 0.2);
+}
+.remember-me {
+    display: flex;
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center; /* Vertically aligns items */
+    margin: 1rem 0; /* Adjust margins as needed */
+}
+
+.remember-me input {
+    margin-right: 0.5rem; /* Space between checkbox and label */
+}
+
+
+
+.login-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #5170fe;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #3a58d4;
+    transform: scale(1.05);
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: #5170fe;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signup-link a:hover {
+    color: #3a58d4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-card {
+        padding: 2rem;
+    }
+
+    .login-title {
+        font-size: 1.8rem;
+    }
+
+    .input-group input {
+        font-size: 0.9rem;
+    }
+
+    .login-btn {
+        font-size: 0.9rem;
+    }
+}

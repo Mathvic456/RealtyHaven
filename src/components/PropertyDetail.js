@@ -1,44 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './PropertyDetail.css';
-// Import the house data
-import { exclusiveHouses, upcomingHouses, soldHouses } from './data/HouseData'; // Adjust the path as necessary
+import { exclusiveHouses, upcomingHouses, soldHouses } from './data/HouseData';
 
 const PropertyDetail = () => {
-    const { id } = useParams(); // Get the ID from the URL
+    const { id } = useParams();
+    const houseData = [...exclusiveHouses, ...upcomingHouses, ...soldHouses];
+    const house = houseData.find((house) => house.id === parseInt(id));
 
-    // Combine all house data into one array for easy searching
-    const houseData = [
-        ...exclusiveHouses,
-        ...upcomingHouses,
-        ...soldHouses,
-    ];
-
-    const house = houseData.find((house) => house.id === parseInt(id)); // Find the house by ID
+    const [showOverlay, setShowOverlay] = useState(false);
 
     if (!house) return <div>House not found.</div>;
 
     return (
         <div className="property-detail-container">
             <h2>{house.address}</h2>
-            <img 
-                className="property-main-image" 
-                src={house.image} 
-                alt={house.address} 
-            />
+            <img className="property-main-image" src={house.image} alt={house.address} />
             <div className="property-details">
                 <p><strong>Total Price:</strong> ${house.totalPrice}</p>
                 <p><strong>Token Price:</strong> ${house.tokenPrice}</p>
                 <p><strong>Expected Income:</strong> ${house.expectedIncome}</p>
-                <p><strong>Rent Start Date:</strong> {house.rentStartDate}</p>
-                <p><strong>Price per Token:</strong> ${house.pricePerToken}</p>
-                <h3>More Images:</h3>
-                {/* Additional images can be added similarly */}
-                {/* Uncomment if you have additional images in your house data */}
-                {/* <img src={house.additionalImage1} alt="Additional" /> */}
-                {/* <img src={house.additionalImage2} alt="Additional" /> */}
+                <button className="show-more-button" onClick={() => setShowOverlay(true)}>Show More Photos</button>
             </div>
             <button className="invest-button">Invest</button>
+
+            {showOverlay && (
+                <div className="overlay">
+                    <div className="overlay-content">
+                        <span className="close" onClick={() => setShowOverlay(false)}>&times;</span>
+                        <h3>Additional Images</h3>
+                        {/* Add additional images here */}
+                        <img src={house.image} alt="Additional" className="overlay-image" />
+                        {/* Add more images as necessary */}
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

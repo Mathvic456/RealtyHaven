@@ -1,16 +1,29 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; // Import useNavigate
 import './PropertyDetail.css';
 import { exclusiveHouses, upcomingHouses, soldHouses } from './data/HouseData';
 
 const PropertyDetail = () => {
     const { id } = useParams();
+    const navigate = useNavigate(); // Initialize useNavigate
     const houseData = [...exclusiveHouses, ...upcomingHouses, ...soldHouses];
     const house = houseData.find((house) => house.id === parseInt(id));
 
     const [showOverlay, setShowOverlay] = useState(false);
 
     if (!house) return <div>House not found.</div>;
+
+    // Handle the invest button click to navigate to the payment page
+    const handleInvest = () => {
+        navigate('/payment', {
+            state: {
+                propertyName: house.address,
+                tokenPrice: house.tokenPrice,
+                totalPrice: house.totalPrice,
+                walletAddress: 'your-crypto-wallet-address' // Replace with actual wallet address
+            }
+        });
+    };
 
     return (
         <div className="property-detail-container">
@@ -22,16 +35,14 @@ const PropertyDetail = () => {
                 <p><strong>Expected Income:</strong> ${house.expectedIncome}</p>
                 <button className="show-more-button" onClick={() => setShowOverlay(true)}>Show More Photos</button>
             </div>
-            <button className="invest-button">Invest</button>
+            <button className="invest-button" onClick={handleInvest}>Invest</button>
 
             {showOverlay && (
                 <div className="overlay">
                     <div className="overlay-content">
                         <span className="close" onClick={() => setShowOverlay(false)}>&times;</span>
                         <h3>Additional Images</h3>
-                        {/* Add additional images here */}
                         <img src={house.image} alt="Additional" className="overlay-image" />
-                        {/* Add more images as necessary */}
                     </div>
                 </div>
             )}

@@ -9,7 +9,7 @@ import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import SignIn from './components/authentication/SignIn';
 import SignUp from './components/authentication/SignUp';
-
+import Payment from './components/Payment';
 
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
         <Route path='Contact' element={<ContactUs />} />
         <Route path='Login-Page' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />
+        <Route path='/payment' element={<Payment />} />
 
       </Routes>
     </Router>

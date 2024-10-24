@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useParams, useNavigate } from 'react-router-dom';
 import './PropertyDetail.css';
 import { exclusiveHouses, upcomingHouses, soldHouses } from './data/HouseData';
 
 const PropertyDetail = () => {
     const { id } = useParams();
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate();
     const houseData = [...exclusiveHouses, ...upcomingHouses, ...soldHouses];
     const house = houseData.find((house) => house.id === parseInt(id));
 
@@ -13,14 +13,13 @@ const PropertyDetail = () => {
 
     if (!house) return <div>House not found.</div>;
 
-    // Handle the invest button click to navigate to the payment page
     const handleInvest = () => {
         navigate('/payment', {
             state: {
                 propertyName: house.address,
                 tokenPrice: house.tokenPrice,
                 totalPrice: house.totalPrice,
-                walletAddress: 'your-crypto-wallet-address' // Replace with actual wallet address
+                walletAddress: 'your-crypto-wallet-address'
             }
         });
     };

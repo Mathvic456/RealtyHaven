@@ -1,98 +1,69 @@
-/* Hero.css */
-.hero {
-    height: 90vh;
-    background: url('https://your-image-url.com/hero-bg.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #081740; /* Navy blue for the text */
-    position: relative;
-}
+/* src/components/Hero.css */
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: rgba(0, 0, 0, 0.5); Dark overlay */
-    z-index: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f7f8fa;
+    color: #333;
+    text-align: left;
 }
 
 .hero-content {
-    text-align: center;
-    max-width: 700px;
-    position: relative;
-    z-index: 1;
+    max-width: 50%;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
 }
 
-.brand-name {
-    color: #5170fe; /* Sky blue for the brand name */
+.highlight {
+    color: #ffa500; /* Highlight color */
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    line-height: 1.5;
+    color: #555;
 }
 
-.hero-btn {
-    padding: 0.75rem 2rem;
-    background-color: #5170fe;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
-}
-/* 
-.hero-btn:hover {
-    background-color: #e55337;
-} */
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem; /* Space between buttons */
+/* Image styling */
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: solid 1px black;
 }
 
-.hero-btn {
-    background-color: transparent;
-    border: 2px solid #5170fe;
-    color: #5170fe;
-}
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-.hero-btn.secondary-btn {
-    background-color: transparent;
-    border: 2px solid #5170fe;
-    color: #5170fe;
-}
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 
-.hero-btn:hover {
-    background-color: #5170fe;
-    color: white;
-}
+    .hero h1 {
+        font-size: 2.2rem;
+    }
 
-.hero-btn.secondary-btn:hover {
-    background-color: #5170fe;
-    color: white;
-}
+    .hero p {
+        font-size: 1rem;
+    }
 
-p span {
-    font-weight: bold;
-}
-
-.hero-btn{
-    font-weight: bold;
-}
-
-
-.hero-btn.secondary-btn{
-    font-weight: bold;
+    .hero-image img {
+        width: 90%;
+    }
 }

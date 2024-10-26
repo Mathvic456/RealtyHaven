@@ -6,7 +6,6 @@
 }
 
 .house-listing-container {
-    /* padding: 3px; Add padding to the page */
     max-width: 1200px; /* Set a maximum width for the container */
     margin: 13px auto 0; /* Center the container and add margin-top */
     text-align: center;
@@ -55,6 +54,10 @@
     .house-grid {
         grid-template-columns: repeat(3, 1fr); /* 3 items per row on large screens */
     }
+
+    .house-card {
+        padding: 20px; /* Increase padding for larger screens */
+    }
 }
 
 @media (max-width: 992px) {
@@ -67,11 +70,25 @@
     .house-grid {
         grid-template-columns: 1fr; /* 1 item per row on small screens */
     }
+
+    .house-image {
+        height: 200px; /* Adjust image height for smaller screens */
+    }
 }
 
 @media (max-width: 576px) {
     .house-grid {
         gap: 20px; /* Reduce gap on very small screens */
+        justify-content: center; /* Center items */
+        padding: 0 10px; /* Add padding on small screens */
+    }
+
+    .house-image {
+        height: 250px; /* Increase image height for small screens */
+    }
+
+    .detail, .detail-price {
+        font-size: 1.1rem; /* Increase font size for readability */
     }
 }
 
@@ -107,13 +124,12 @@
     .tabs button {
         padding: 10px 15px; /* Adjust padding for smaller screens */
         font-size: 1rem; /* Slightly decrease font size */
-        margin: 0 5px; /* Reduce margin for smaller screens */
     }
 }
 
 @media (max-width: 576px) {
     .tabs button {
-        width: 100%; /* Full width buttons on very small screens */
-        margin: 5px 0; /* Margin on top and bottom for spacing */
+        width: 80%; 
+        margin: 5px auto; /* Center buttons on small screens */
     }
 }

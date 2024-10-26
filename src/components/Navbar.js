@@ -1,29 +1,34 @@
-import React from 'react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa'; // Import menu icon
-import '../components/Navbar.css';
-import SignIn from './authentication/SignIn';
+// src/components/Navbar.js
+import React, { useState } from 'react';
+import { FiMenu, FiArrowRight } from 'react-icons/fi'; // Importing the menu and arrow icons
+import './Navbar.css';
+
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false); // State for mobile menu
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
+
     return (
         <nav className="navbar">
-            <div className="logo">RealtyHaven</div>
-            <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='Properties'>Properties</Link></li>
-                <li><Link to='AboutUs'>About Us</Link></li>
-                <li><Link to='Contact'>Contact Us</Link></li>
-                <li><Link to='Login-Page'>Login</Link></li>
-
+            <div className="navbar-logo">RealtyHaven</div>
+            <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
+                <li><a href="#home" onClick={closeMenu}>Home</a></li>
+                <li><a href="#about" onClick={closeMenu}>About Us</a></li>
+                <li><a href="#properties" onClick={closeMenu}>Properties</a></li>
+                <li className="mobile-invest"><a href="#invest" onClick={closeMenu}>Invest Now</a></li>
             </ul>
+            {/* Invest button with icon for desktop */}
+            <button className="invest-btn bounce-animation">
+                Invest Now <FiArrowRight />
+            </button>
             <div className="menu-icon" onClick={toggleMenu}>
-                <FaBars size={22} color='#5170fe'/> {/* Menu icon */}
+                <FiMenu />
             </div>
         </nav>
     );

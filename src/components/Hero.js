@@ -1,23 +1,18 @@
-// Hero.js
+// src/components/Hero.js
 import React from 'react';
-import '../components/Hero.css';
-import Navbar from './Navbar';
-import { Link } from 'react-router-dom';
-
-
+import './Hero.css';
 
 const Hero = () => {
     return (
         <section className="hero">
-            
             <div className="hero-content">
-                <h1><span className="brand-name">RealtyHaven</span> - Your Gateway to Real Estate Ownership</h1>
-                <p>At <span className="brand-name">RealtyHaven</span>, we believe in making real estate investment accessible to everyone. Invest in high-quality properties, own a piece of real estate, and let us handle the rest.</p>
-                <p>Experience hassle-free investment with <span className="brand-name">RealtyHaven</span>. Start building your portfolio today and enjoy passive income without worrying about tenants or maintenance.</p>
-                <div className="hero-buttons">
-                    <Link to="/properties" className="hero-btn">Invest</Link>
-                    <Link to="Contact" className="hero-btn secondary-btn">Contact Us</Link>
-                </div>
+                <h1>Your <span className="highlight">Gateway</span> to state-of-the-art <span className='highlight'>Digital</span> Real Estate Portfolios.</h1>
+                <p>
+                    We believe in making real estate investment accessible to everyone either digitally or in-person. With us you can digitally invest in high-quality properties, own a piece of real estate, and let us handle the rest. Experience and enjoy hassle-free investment with RealtyHaven.
+                </p>
+            </div>
+            <div className="hero-image">
+                <img src="https://via.placeholder.com/600x400" alt="Real estate property" />
             </div>
         </section>
     );

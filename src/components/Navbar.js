@@ -19,9 +19,9 @@ const Navbar = () => {
             <div className="navbar-logo">RealtyHaven</div>
             <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
                 <li><a href="#home" onClick={closeMenu}>Home</a></li>
-                <li><a href="#about" onClick={closeMenu}>About Us</a></li>
-                <li><a href="#properties" onClick={closeMenu}>Properties</a></li>
-                <li className="mobile-invest"><a href="#invest" onClick={closeMenu}>Invest Now</a></li>
+                <li><a href="#home" onClick={closeMenu}>About Us</a></li>
+                <li><a href="#home" onClick={closeMenu}>Properties</a></li>
+                <li className="mobile-invest"><a href="#home" onClick={closeMenu}>Invest Now</a></li>
             </ul>
             {/* Invest button with icon for desktop */}
             <button className="invest-btn bounce-animation">

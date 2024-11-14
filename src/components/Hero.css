@@ -1,69 +1,127 @@
 /* src/components/Hero.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 .hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden    ;
+    padding: 20px; /* Add padding for smaller screens */
+    /* border: 1px solid black; */
+}
+
+.hero-texts {
+    display: flex;
     justify-content: space-between;
-    padding: 50px;
-    background-color: #f7f8fa;
-    color: #333;
-    text-align: left;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+    max-width: 1200px;
 }
 
-.hero-content {
-    max-width: 50%;
+.hero-heading {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 600px;
 }
 
-.hero h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
+.hero-heading h1 {
+    font-size: 2.5rem;
+    color: #212121;
+    font-weight: bold;
     line-height: 1.2;
 }
 
-.highlight {
-    color: #ffa500; /* Highlight color */
+.hero-heading .highlight {
+    color: #F7931E;
 }
 
-.hero p {
-    font-size: 1.1rem;
-    margin: 20px 0;
+.hero-subtext {
+    flex: 1;
+    padding-left: 20px;
+    max-width: 600px;
+}
+
+.hero-subtext p {
+    color: #666;
+    font-size: 1rem;
     line-height: 1.5;
-    color: #555;
 }
 
-/* Image styling */
+.hero-image {
+    width: 100%;
+    height: 400px; /* Set a default height */
+    overflow: hidden; /* Hide any part of the image that overflows */
+}
+
 .hero-image img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: solid 1px black;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fully covers the container */
+    object-position: center; /* Centers the image within the container */
+    border-radius: 5px;
 }
 
+.image-holder {
+    height: 100%;
+    width: 100%;
+}
+
+/* Responsive styling for tablets */
+@media (max-width: 992px) {
+    .hero-heading h1 {
+        font-size: 2rem; /* Reduce heading size */
+    }
+
+    .hero-subtext p {
+        font-size: 0.9rem; /* Adjust font size for readability */
+    }
+
+    .hero-image {
+        height: 300px; /* Adjust image height */
+    }
+}
+
+/* Responsive styling for smaller screens (e.g., mobile) */
 @media (max-width: 768px) {
-    .hero {
+    .hero-texts {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        text-align: center; /* Center-align text */
     }
 
-    .hero-content {
+    .hero-heading,
+    .hero-subtext {
+        padding: 0;
         max-width: 100%;
-        margin-bottom: 20px;
     }
 
-    .hero h1 {
-        font-size: 2.2rem;
+    .hero-heading h1 {
+        font-size: 1.8rem; /* Reduce font size further */
+        line-height: 1.3;
     }
 
-    .hero p {
-        font-size: 1rem;
+    .hero-subtext p {
+        font-size: 0.85rem; /* Further adjust font size */
     }
 
-    .hero-image img {
-        width: 90%;
+    .hero-image {
+        height: 250px; /* Set a smaller image height for mobile */
+    }
+}
+
+/* Extra small screens (e.g., very small mobile) */
+@media (max-width: 480px) {
+    .hero-heading h1 {
+        font-size: 1.5rem; /* Further reduce heading size */
+    }
+
+    .hero-subtext p {
+        font-size: 0.8rem;
+    }
+
+    .hero-image {
+        height: 200px; /* Adjust image height for very small screens */
     }
 }

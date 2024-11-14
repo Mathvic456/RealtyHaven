@@ -1,0 +1,127 @@
+/* src/components/WhyUs.css */
+
+.why-us-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.why-us-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #212121;
+}
+
+.why-us-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.why-us-text {
+    flex: 2;
+    line-height: 1.6;
+}
+
+.why-us-text p {
+    margin-bottom: 16px;
+}
+
+.why-us-card {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    animation: bounce 2s infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-us-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #F7931E;
+    margin-bottom: 10px;
+}
+
+/* Hover effect */
+.why-us-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.mission {
+    /* Optional: Additional mission-specific styling */
+}
+
+.mission p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.mission-image {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Responsive styling for tablets */
+@media (max-width: 992px) {
+    .why-us-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why-us-header {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .why-us-text,
+    .why-us-card {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .why-us-card {
+        animation: bounce 2s infinite; /* Maintain bounce animation */
+    }
+
+    .why-us-card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 768px) {
+    .why-us-header {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .why-us-text p {
+        font-size: 0.9rem;
+    }
+
+    .why-us-card h2 {
+        font-size: 1.2rem;
+    }
+}

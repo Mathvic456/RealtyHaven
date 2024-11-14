@@ -16,24 +16,13 @@ function App() {
   const allListings = [...exclusiveHouses, ...upcomingHouses, ...soldHouses];
 
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Hero />} />
-        <Route path='/properties' element={<Properties 
-          exclusiveHouses={exclusiveHouses}
-          upcomingHouses={upcomingHouses}
-          soldHouses={soldHouses} 
-        />} />
-        <Route path='/property/:id' element={<PropertyDetail houseData={allListings} />} />
-        <Route path='AboutUs' element={<AboutUs />} />
-        <Route path='Contact' element={<ContactUs />} />
-        <Route path='Login-Page' element={<SignIn />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/payment' element={<Payment />} />
+    <div className='App'>
+      <Navbar/>
+      <Hero/>
+      <AboutUs/>
 
-      </Routes>
-    </Router>
+    </div>
+    
   );
 }
 
